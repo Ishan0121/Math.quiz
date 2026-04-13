@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import useStore from './store/useAuthStore';
 import { getThemeClass } from './utils/helpers';
@@ -25,7 +25,7 @@ export default function App() {
   }, [user?.classLevel]);
 
   return (
-    <BrowserRouter basename="/Math">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<AuthPage />} />
         <Route path="/dashboard"   element={<Protected><Layout><DashboardPage /></Layout></Protected>} />
@@ -36,6 +36,6 @@ export default function App() {
         <Route path="/admin"       element={<Protected><Layout><AdminPage /></Layout></Protected>} />
         <Route path="*"            element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

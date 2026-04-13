@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Base path = '/Math/' for GitHub Pages (repo name)
-// Change this to '/' if deploying to a custom domain or root
+// Base path is relative so it works on any URL
 export default defineConfig({
   plugins: [react()],
-  base: '/Math/',
+  base: './',
 })
