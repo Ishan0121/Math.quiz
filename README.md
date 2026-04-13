@@ -52,7 +52,7 @@ You need **Node.js 18+** installed on your system.
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/Ishan0121/Math.quiz.git
    cd Math
    ```
 
